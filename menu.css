@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.menuContainer {
+  display: flex;
+  height: 58px;
+  margin-top: 40px;
+  background-color: #0075ee;
+  width: 100%;
+}
+.menu {
+  width: 1179px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+}
+/* .menuA {
+  text-decoration: none;
+  color: white;
+  margin-right: 100px;
+  font-size: 18px;
+  font-family: "BalooTammudu2";
+  line-height: 58px;
+} */
+.menuItem {
+  width: 100%;
+}
+nav {
+  width: 590px;
+  height: 58px;
+  display: flex;
+  justify-content: space-between;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  line-height: 50px;
+  font-size: 18px;
+}
+.menuA {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;
+}
+.menuA:hover {
+  background-color: #00bd00;
+}
+.basket {
+  display: flex;
+  align-items: center;
+  background-color: #ffbe00;
+  height: 38px;
+  width: 40px;
+  justify-content: center;
+  border-radius: 100px;
+  margin-left: -10px;
+  cursor: pointer;
+}
+
+.shopItem {
+  display: flex;
+  align-items: center;
+  width: 65px;
+  margin-left: 10px;
+}
+
+.price > span,
+p {
+  color: white;
+}
