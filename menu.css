@@ -44,6 +44,7 @@ nav a {
   display: flex;
   justify-content: center;
   transition: 0.5s;
+  align-items: center;
 }
 .menuA:hover {
   background-color: #00bd00;
