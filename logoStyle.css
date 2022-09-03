@@ -36,6 +36,7 @@ select {
   line-height: 3.125;
   text-align: center;
   cursor: pointer;
+  text-align: left;
 }
 select::-ms-expand {
   display: none;

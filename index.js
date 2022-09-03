@@ -6,6 +6,8 @@ const next = document.querySelector(".next");
 const marker = document.querySelectorAll(".marker");
 let count = 0;
 let direction;
+let time = 3000;
+let sliderTimer = null;
 
 function checkMarkers() {
   marker[count].classList.add("active");
@@ -18,8 +20,8 @@ function checkMarkers() {
 }
 next.addEventListener("click", () => {
   checkMarkers();
-  // console.log(count);
-  // console.log(marker[0]);
+  clearInterval(sliderTimer);
+  autoSlider();
   direction = -1;
   slider.style.flexDirection = "row";
   slider.style.transform = "translate(-100%)";
@@ -27,16 +29,18 @@ next.addEventListener("click", () => {
 prev.addEventListener("click", () => {
   direction = 1;
   checkMarkers();
+  clearInterval(sliderTimer);
+  autoSlider();
   slider.style.flexDirection = "row-reverse";
   slider.style.transform = "translate(100%)";
 });
 function autoSlider() {
-  setInterval(() => {
+  sliderTimer = setInterval(() => {
     direction = -1;
     checkMarkers();
     slider.style.flexDirection = "row";
     slider.style.transform = "translate(-100%)";
-  }, 2000);
+  }, time);
 }
 
 slider.addEventListener("transitionend", function () {
